@@ -1,17 +1,13 @@
 {
-    "builds": [{
-        "src": "rsic/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
-    }],
-    "routes": [
+    "builds": [
         {
-            "src": "/(.*)",
-            "dest": "rsic/wsgi.py"
-        
-    }],
+            "src": "rsic/wsgi.py",
+            "use": "@vercel/python",
+            "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+        }
+    ],
     "rewrites": [
       { "source": "/static/(.*)", "destination": "/staticfiles/$1" },
-      { "source": "/(.*)", "destination": "/api/$1" }
+      { "source": "/(.*)", "destination": "/rsic/wsgi.py" }
     ]
 }
