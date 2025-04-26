@@ -36,8 +36,6 @@ pypiwin32==223
 python-ipware==3.0.0
 python-stdnum==1.19
 pytz==2024.1
-pywin32==308
-pywin32-ctypes==0.2.3
 requests==2.32.3
 sh==2.2.1
 sqlparse==0.4.4
