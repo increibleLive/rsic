@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+{% block myContent %}
+<div class="bg0 m-t-23 p-b-140">
+    <div class="container">
+        <div class="flex-w flex-sb-m">
+            <div class="flex-w flex-l-m filter-tope-group m-tb-10">
+                 {% comment %} <asp:button id="btnAllCategories" cssClass="cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1" runat="server" text="All Products" OnClick="btnAllCategories_Click" /> {% endcomment %}
+                 <a href="/products" id="btnAllCategories" class="cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1">All Products</a>
+                    {% for n in cat %}
+                     
+                    <a href="/products/{{n.slug}}" id="btnCate" class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5">{{n.categoryName}}</a>
+                     {% comment %} <asp:Button id="btnCate" CommandName="vw" CommandArgument='<%# Eval("CategoryId") %>' cssClass="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" runat="server" Text='{{n.categoryName}}' OnClick="btnCate_Click"></asp:Button>  {% endcomment %}
+                    
+                     {% endfor %}
+            </div>
+            
+        </div>
+        
+        <!--gallery-->
+<div class="gallery">
+    <div class="container py-md-4 mt-md-3">
+        
+        <div class="row gallery-info">
+            
+                {% for p in prod %}
+                <div class="col-sm-6 col-xs-12 col-lg-3">
+                <a href="/media/{{p.photo}}" class="gallery-box" data-lightbox="example-set" data-title="">
+                    <img src="/media/{{p.photo}}" alt='realstar ice cream' class="img-fluid zoom-img img-responsive">
+                    
+                </a>
+              &nbsp;&nbsp;&nbsp;&nbsp;<p style="margin-bottom:30px;margin-top:-10px;"  class=" mrgin stext-104 text-center cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                {{p.name}}
+                            </p>
+
+                </div>
+                {% endfor %}
+            
+        </div>
+        <script src="{% static 'js/lightbox-plus-jquery.min.js' %}"></script>
+    </div>
+</div>
+       
+
+    </div>
+</div>
+{% endblock  %}
+

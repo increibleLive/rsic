@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+
+{% block myContent %}
+ <!-- Title page -->
+ <section class="bg-img1 my txt-center p-lr-15 p-tb-92" style="background-image: url('../static/images/contactbg.jpg');">
+    <h2 class="ltext-105 cl0 txt-center">
+        Contact
+    </h2>
+</section>
+
+<!-- Content page -->
+<section class="bg0 p-t-104 p-b-116">
+    <div class="container">
+        <div class="flex-w flex-tr">
+            <div class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md">
+                
+                    <h4 class="mtext-105 cl2 txt-center p-b-30">
+                        Send Us A Message
+                    </h4>
+                <form method="post" id="frmEnquiry" name="frmEnquiry">
+                    {% csrf_token %}
+                    <div class="bor8 m-b-20 how-pos4-parent">
+                        {% if error %}
+                        <div class="alert alert-danger" role="alert">
+                            Name is required!
+                        </div>
+                        {% endif %}
+                        <input type="text" class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" placeholder="*Your Name" name="txtName"/>
+                        <img class="how-pos4 pointer-none" src="../static/images/icons/user-icon.png" alt="ICON">
+                    </div>
+                    <div class="bor8 m-b-20 how-pos4-parent">
+                        
+                        <input type="text" class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" placeholder="*Your Email Address" name="txtEmail"/>
+                        <img class="how-pos4 pointer-none" src="../static/images/icons/icon-email.png" alt="ICON"/>
+                    </div>
+                    <div class="bor8 m-b-20 how-pos4-parent">
+                       
+                        <input type="text" class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" placeholder="*Your Mobile Number" name="txtMobile"/>
+                        <img class="how-pos4 pointer-none" src="../static/images/icons/goods_tab_phone.png" alt="ICON"/>
+                    </div>
+                    <div class="bor8 m-b-20 how-pos4-parent">
+                        {% comment %} <asp:dropdownlist id="ddlSubject" class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" OnDataBound="ddlSubject_DataBound" runat="server">
+                            
+                        </asp:dropdownlist> {% endcomment %}
+                        <select id="ddlSubject" name="ddlSubject" class="bor8 stext-111 cl2 plh3 size-116 p-l-62 p-r-30">
+                            <option value="-1">*Select Category</option>
+                            {% for c in cate %}
+                                <option value="{{c.categoryName}}">{{c.categoryName}}</option>
+                            {% endfor %}
+                        </select>
+                    
+                        <img class="how-pos4 pointer-none" src="../static/images/icons/icon-email.png" alt="ICON">
+                    </div>
+
+                    <div class="bor8 m-b-30">
+                        {% comment %} <asp:TextBox ID="txtUrcomments" TextMode="MultiLine" class="stext-111 cl2 plh3 size-120 p-lr-28 p-tb-25" name="msg" placeholder="*How Can We Help ?" runat="server"></asp:TextBox> {% endcomment %}
+                        <textarea style="margin-bottom:0;background:0" class="stext-111 cl2 plh3 size-120 p-lr-28" name="msg" placeholder="*How Can We Help ?"></textarea>
+                        
+                    </div>                        
+                {% comment %} <asp:Button ID="btnSubmit" disabled class="flex-c-m stext-101 cl0 size-121 bg2 bor1 hov-btn1 p-lr-15 trans-04" runat="server" Text="Submit" OnClick="btnSubmit_Click" /> {% endcomment %}
+                <input type="submit" class="flex-c-m stext-101 cl0 size-121 bg2 bor1 hov-btn1 p-lr-15 trans-04" text="Submit"/>
+                <br />	
+                 {% comment %} <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label> {% endcomment %}
+                 <label id="lblMsg" name="lblMsg">{{rel}}</label>
+            </div>
+        </form>
+
+            <div class="size-210 bor10 flex-w flex-col-m p-lr-93 p-tb-30 p-lr-15-lg w-full-md">
+                <div class="flex-w w-full p-b-42">
+                    <span class="fs-18 cl5 txt-center size-211">
+                        <span class="lnr lnr-map-marker"></span>
+                    </span>
+
+                    <div class="size-212 p-t-2">
+                        <span class="mtext-110 cl2">
+                            Address
+                        </span>
+
+                        <p class="stext-115 cl6 size-213 p-t-18">
+                            205, Gali No. 4, Azad Nagar, Yamuna Nagar - 135001
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex-w w-full p-b-42">
+                    <span class="fs-18 cl5 txt-center size-211">
+                        <span class="lnr lnr-phone-handset"></span>
+                    </span>
+
+                    <div class="size-212 p-t-2">
+                        <span class="mtext-110 cl2">
+                            Lets Talk
+                        </span>
+
+                        <p class="stext-115 cl1 size-213 p-t-18">
+                              +91-94660-19331 <br />
+                              +91-78760-50007
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex-w w-full p-b-42">
+                    <span class="fs-18 cl5 txt-center size-211">
+                        <span class="lnr lnr-envelope"></span>
+                    </span>
+
+                    <div class="size-212 p-t-2">
+                        <span class="mtext-110 cl2">
+                            Sale Support
+                        </span>
+
+                        <p class="stext-115 cl1 size-213 p-t-18">
+                             realstaricecream@yahoo.com
+                        </p>
+                    </div>
+
+                </div>
+                <div class="flex-w w-full">
+                     <span class="fs-18 cl5 txt-center size-211">
+                        
+                    </span>
+                    <div class="size-212 p-t-2">
+                        <h3 class="mtext-111 cl2">
+                            Social
+                        </h3>
+
+                        <div class="stext-115 cl1 size-213 p-t-18">
+                            
+                            <a target="_blank" href="https://www.facebook.com/Real-Star-Ice-cream-1690764777647747/"><span class="fa fa-facebook-square"></span> </a>
+                            <a target="_blank" href="https://www.instagram.com/realstaricecream/?utm_source=ig_profile_share&igshid=x6bji3x5n57g"><span class="fa fa-instagram"></span></a>
+                        {% comment %} <a href="#"><span class="fa fa-google-plus"></span></a>
+                        <a href="#"><span class="fa fa-youtube"></span></a>
+                        <a href="#"><span class="fa fa-pinterest-p"></span></a> {% endcomment %}
+                   
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                </div>
+
+
+
+            </div>
+
+    
+</section>	
+
+
+<!-- Map -->
+<div class="map">
+    
+       <iframe class="size-303" id="google_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3450.8507709035475!2d77.30042951511707!3d30.127083381852312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390efb351b12bd47%3A0x54709446aaf9c254!2sReal+Star+Ice+Cream!5e0!3m2!1sen!2sin!4v1547296623801" width="100%" height="390" frameborder="0" style="border:0"></iframe> 
+</div>
+    
+
+{% endblock  %}

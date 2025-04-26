@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+
+{% block myContent %}
+<link rel="stylesheet" href="../static/css/owl.carousel.min.css">
+<link rel="stylesheet" href="../static/css/owl.theme.default.css">
+ 
+ <script src="../static/js/owl.carousel.min.js"></script>
+<div id="demo1" >
+    {% for n in imgData %}    
+    <div class="slide">
+        <img  src='../media/{{n.image}}' alt='real star ice cream' />
+    </div>
+    {% endfor %}
+</div>
+
+<div class="container ccHome">
+    <div class="row p-b-100">
+        <div class="col-md-7 col-lg-8">
+            <div class="p-t-7 p-r-85 p-r-15-lg p-r-0-md">
+                <h3 class="mtext-111 cl2 p-b-16">
+                    Our Story
+                </h3>
+
+                <p class="stext-113 cl6 p-b-26 myFs">
+                    Real Star (owned by Sharma Food Products) was the first organization to bring up the idea of in house production of ice cream in Yamuna Nagar District of Haryana in 2007. Since Inception, our constant emphasis on quality consciousness and innovating with new flavors has delighted the taste buds of many customers. Our presence in Haryana, Punjab, Uttarakhand, Himachal Pradesh has been adding wholesome goodness to the lives of thousands since decade. 
+Since its launch in 2007, we are growing as a manufacturer as well as a supplier. We are equipped with all sort of modern and high – tech machineries to ensure a high standard production. Our plant in Yamuna Nagar district is <strong>ISO 9001 : 2008 and ISO 22000 : 2005</strong> certified with FSSAI No. 20814021000007. <a class="cl1" href="About.aspx">read more...</a>
+
+                </p>
+
+            </div>
+        </div>
+        <div class="col-11 col-md-5 col-lg-4 m-lr-auto">
+            <div class="how-bor1 ">
+                <div class="hov-img0">
+                    <img src="../static/images/abtHome.jpg" alt="realstar ice cream"/>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="owl" style="text-align:center">
+   <p class="gfs">Enjoy Our Heart's Connecting Taste</p>
+    <div style="margin:auto;background-color:red;width:90px;height:4px;"></div>
+        </div>
+    <br />
+  
+    <div class="row">
+        <div class="owl-carousel abc">
+            {% for i in prod %}
+            <img class="mYwidth" src='../media/{{i}}' alt='real star ice cream'>
+            {% endfor %}
+        </div>
+        <script>
+            $(document).ready(function(){
+          $(".owl-carousel").owlCarousel();
+                
+        });
+            </script>
+            <script>
+            var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            items:4,
+            loop:true,
+            margin:10,
+            autoplay:true,
+            autoplayTimeout:1000,
+            autoplayHoverPause:true
+        });
+        $('.play').on('click',function(){
+            owl.trigger('play.owl.autoplay',[1000])
+        })
+        $('.stop').on('click',function(){
+            owl.trigger('stop.owl.autoplay')
+        })
+            </script>
+        <div class="flex-c-m flex-w w-full p-t-45" style="padding-bottom:80px">
+				<a href="/products" class="flex-c-m stext-101 cl0 size-103 bg2 bor1 hov-btn1 p-lr-15 trans-04">
+					View More
+				</a>
+			</div>
+        </div>
+            </div>
+            <div class="container" style="background:url(../static/images/free-flat-design-vector-sweet-ice-cream-pattern.jpg)">
+                <br />
+            <div class="row p-b-50" >
+                 <div class="col-11 col-md-5 col-lg-4 m-lr-auto">
+					<div class="how-bor1 ">
+						<div class="hov-img0">
+							<img src="../static/images/frHome2.jpeg" alt="realstar ice cream"/>
+						</div>
+					</div>
+                     <br />
+                <br />
+				</div>
+                
+                <div class="col-md-7 col-lg-8">
+					<div class="p-t-7 p-r-85 p-r-15-lg p-r-0-md">
+						<h3 class="mtext-111 p-b-16" style="color:black;">
+							Join The Franchies
+						</h3>
+
+						<div class="stext-113 p-b-26 myFs">
+
+						Real Star offers lucrative business opportunities for interested entrepreneurs by offering franchisees for ice cream parlours across India. The business model is based on the principle of maximizing profits for the franchisee and providing comprehensive support in terms of Operations, Marketing, Training, Business Development & Inventory Control. Real Star Ice-Cream is also geared up for the emerging concepts in retailing through customized ice cream kiosks for specific and island positions. Enterprising people who can own responsibility and ensure commitment towards the brand 'Real Star' are welcome.
+						
+                        
+				<a href="/franchisee" class="m-t-20 flex-c-m stext-101 cl0 size-101 bg2 bor1 hov-btn1 p-lr-15 trans-04">
+					Join Us <i class="fa fa-arrow-right " style="padding-left: 10px;margin-top: -3px;"></i> 
+			
+                    </a>
+                            </div>
+					</div>
+				</div>
+            
+                
+            </div>
+    </div>
+    <br />
+    <br />
+            <div class="container-fluid" style="background-color:#ED1C24;">
+                <br />
+             <div style="text-align:center;font-size:25px;font-family:cursive">
+           <p style="color:white">OUR MILESTONES</p>
+            <div style="margin:auto;background-color:black;width:90px;height:4px;"></div>
+                </div>
+            <br />
+        <div class="row">
+             
+            <div class="wrapper">
+    <div class="counter col_fourth">
+      <i class="fa fa-users fa-2x"></i>
+      <h2 class="timer count-title count-number" data-to="2007" data-speed="2000"></h2>
+       <p class="count-text ">SINCE</p>
+    </div>
+
+    <div class="counter col_fourth">
+      <i class="fa fa-product-hunt fa-2x"></i>
+      <h2 class="timer count-title count-number" data-to="85" data-speed="2000"></h2>
+      <p class="count-text ">PRODUCTS</p>
+    </div>
+
+    <div class="counter col_fourth">
+      <i class="fa fa-user fa-2x"></i>
+      <h2 class="timer count-title count-number" data-to="15" data-speed="2000"></h2>
+      <p class="count-text ">DEALERS</p>
+    </div>
+
+    <div class="counter col_fourth end">
+      <i class="fa fa-user fa-2x"></i>
+      <h2 class="timer count-title count-number" data-to="21" data-speed="2000"></h2>
+      <p class="count-text ">DISTRIBUTORS</p>
+    </div>
+</div>
+        </div>
+                </div>
+
+
+{% endblock  %}
