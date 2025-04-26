@@ -1,0 +1,49 @@
+﻿.my {
+        margin-top: 80px;
+}
+
+.stext-113.cl6.p-b-26 a span,.stext-115.cl1.size-213.p-t-18 a span
+ {
+    color: #888;
+    font-size: 24px;
+    margin-right: 16px;
+}
+
+.stext-113.cl6.p-b-26 a:hover span,
+.stext-115.cl1.size-213.p-t-18 a:hover span 
+{
+     color: #666;
+}
+
+.bg0.m-t-23.p-b-140 {
+    margin-top: 110px;
+}
+
+.myImg,img.img-fluid.zoom-img  {
+    /*width:250px !important;*/
+	width:100% !important;
+	height:auto;
+    /*height:250px;*/
+}
+
+.owl {
+    margin-bottom:10px;
+}
+
+span.stext-104.cl4.hov-cl1.trans-04.js-name-b2.p-b-6 {
+    width: 150px;
+    text-align: center;
+}
+
+.ccHome {
+    margin-top: 75px;
+}
+
+.mYwidth {
+    width:100px !important;
+
+}
+
+.main-menu li:hover a {
+    color:#e31e24 !important;
+}
