@@ -8,6 +8,10 @@
         {
             "src": "/(.*)",
             "dest": "rsic/wsgi.py"
-        }
+        
+    }],
+    "rewrites": [
+      { "source": "/static/(.*)", "destination": "/staticfiles/$1" },
+      { "source": "/(.*)", "destination": "/api/$1" }
     ]
 }
