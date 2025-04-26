@@ -1,0 +1,60 @@
+﻿label#desc {
+    font-size: 12px;
+}
+
+thead.thead-dark tr th {
+    color: white;
+}
+thead.thead-dark {
+    background: black;
+    /* color: white; */
+}
+
+.clearFloat {
+    clear:both;
+}
+
+.myTable tr th {
+   
+    text-align: left !important;
+    background-color: black !important;
+    color: white !important;
+}
+
+
+.pull-left.position {
+    margin-top: -10px;
+    margin-left: 10px;
+    float:left;
+}
+
+.input-text {
+    float: left;
+}
+
+select#adminContent_ddlAllCategory,
+input#adminContent_btnView {
+    float: left;
+}
+
+.form-control.cls {
+    display:inline !important;
+   width:180px;
+}
+
+input#adminContent_btnView ,input#adminContent_btnDelAllCatProd
+{
+    margin-left: 10px;
+}
+select#adminContent_gvProducts_ddlBindedCategory_0 {
+    width: 60%;
+}
+
+span#cc {
+    position: absolute;
+    top: 17px;
+    left: 35px;
+    font-size: 14px;
+    color: red;
+    font-weight: bold;
+}
