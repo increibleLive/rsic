@@ -9,7 +9,6 @@ distlib==0.3.8
 Django==5.0.1
 django-autoslug==1.9.9
 django-localflavor==4.0
-django-tinymce==3.7.1
 filelock==3.13.1
 filetype==1.2.0
 frozenlist==1.4.1
@@ -36,3 +35,4 @@ whitenoise==6.7.0
 Whoosh==2.7.4
 yarl==1.9.4
 yt-dlp==2025.1.15
+psycopg2-binary-2.9.10
