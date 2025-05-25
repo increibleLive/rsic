@@ -87,17 +87,28 @@ WSGI_APPLICATION = 'rsic.wsgi.application'
 #     }
 # }
 
+
+
+# Add these at the top of your settings.py
+
+from dotenv import load_dotenv
+from urllib.parse import urlparse
+
+load_dotenv()
+
+database_url = os.getenv('DATABASE_URL')  # get DATABASE_URL from environment
+tmpPostgres = urlparse(database_url)
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'kvUWKIeSUooTvuhItjGGbKzSWoMvwmFA',
-        'HOST': 'shinkansen.proxy.rlwy.net',
-        'PORT': '47313',
+        'NAME': tmpPostgres.path[1:], 
+        'USER': tmpPostgres.username,
+        'PASSWORD': tmpPostgres.password,
+        'HOST': tmpPostgres.hostname,
+        'PORT': 5432,
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
